@@ -1,4 +1,4 @@
-const port = 5000 || '0.0.0.0'
+const port = process.env.PORT || 5000 
 const io = require('socket.io')(port)
 
 io.on('connection', socket => {
